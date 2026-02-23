@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskFormModalComponent } from './task-form-modal.component';
+import { TaskFormModalComponent } from './task-form-modal-data.component';
 
 describe('TaskFormModalComponent', () => {
   let component: TaskFormModalComponent;
@@ -8,9 +8,8 @@ describe('TaskFormModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskFormModalComponent]
-    })
-    .compileComponents();
+      imports: [TaskFormModalComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TaskFormModalComponent);
     component = fixture.componentInstance;
