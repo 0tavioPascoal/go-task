@@ -1,1 +1,44 @@
-<p>task-form-modal works!</p>
+<form class="rounded-xl overflow-hidden" action="">
+  <div class="flex gap-4 items-center p-4">
+    <img src="icon-new-task.svg" alt="Criar" />
+    <h1 class="font-semibold text-lg">Criar/Editar Tarefa</h1>
+    <img class="ml-auto cursor-pointer" src="icon-close.svg" alt="Fechar" />
+  </div>
+
+  <div class="p-4 border-y border-[#D1D5DD] flex flex-col gap-4">
+    <div>
+      <p class="font-semibold text-sm mb-2">Nome:</p>
+      <input
+        class="w-full border border-[#D1D5dd] p-3 rounded-lg text-sm text-[#89919f]"
+        type="text"
+        placeholder="Escreva o que deverá ser feito!"
+      />
+      <p class="font-semibold text-sm text-red-500">O campo é obrigatorio!</p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-sm mb-2">Descrição:</p>
+      <input
+        class="w-full border border-[#D1D5dd] p-3 rounded-lg text-sm text-[#89919f]"
+        type="text"
+        placeholder="Adicione uma descrição"
+      />
+      <p class="font-semibold text-sm text-red-500">O campo é obrigatorio!</p>
+    </div>
+  </div>
+
+  <div class="flex p-4 justify-end gap-2">
+    <button
+      class="py-3 px-4 bg-[#FAFAFA] text-sm font-semibold text-white cursor-pointer rounded-xl active:translate-y-1 transition-transform duration-75"
+      type="button"
+    >
+      Cancelar
+    </button>
+    <button
+      class="py-3 px-4 bg-[#2a89ef] text-sm font-semibold text-white cursor-pointer rounded-xl active:translate-y-1 transition-transform duration-75 shadow-md shadow-blue-500/50"
+      type="submit"
+    >
+      Criar uma Tarfea!
+    </button>
+  </div>
+</form>
