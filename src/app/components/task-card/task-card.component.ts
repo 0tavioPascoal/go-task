@@ -1,3 +1,4 @@
+import { DialogRef } from '@angular/cdk/dialog';
 import { Component, inject } from '@angular/core';
 import { ModalControllerService } from '../../services/modal-controller.service';
 
@@ -11,6 +12,10 @@ export class TaskCardComponent {
   private readonly _modalService = inject(ModalControllerService);
 
   openEditTaskModal() {
-    this._modalService.openEditTaskModal({name: "Nova tarefa", description: "desc tarefa" })
+    const DialogRef = this._modalService.openEditTaskModal({name: "Nova tarefa", description: "desc tarefa" })
+
+    DialogRef.closed.subscribe((taskForm) => {
+      console.log("Editing", taskForm)
+    })
   }
 }

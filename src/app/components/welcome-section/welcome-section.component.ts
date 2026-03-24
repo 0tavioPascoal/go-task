@@ -1,3 +1,4 @@
+import { DialogRef } from '@angular/cdk/dialog';
 import { Component, inject } from '@angular/core';
 import { ModalControllerService } from '../../services/modal-controller.service';
 
@@ -12,6 +13,10 @@ export class WelcomeSectionComponent {
   private readonly _modalService = inject(ModalControllerService)
 
   openNewTaskModal() {
-    this._modalService.openNewTaskModal()
+    const DialogRef = this._modalService.openNewTaskModal()
+
+    DialogRef.closed.subscribe((taskForm) => {
+      console.log("tarefa criada", taskForm)
+    })
 }
 }
