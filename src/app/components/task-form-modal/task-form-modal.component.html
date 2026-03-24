@@ -8,7 +8,9 @@
     <h1 class="font-semibold text-lg">
       {{ (_data.mode === 'create' ? 'Criar' : 'Editar') + ' tarefa' }}
     </h1>
-    <img class="ml-auto cursor-pointer" src="icon-close.svg" alt="Fechar" />
+    <img class="ml-auto cursor-pointer" src="icon-close.svg" alt="Fechar" 
+    (click)="closeModal()"    
+    />
   </div>
 
   <div class="p-4 border-y border-[#D1D5DD] flex flex-col gap-4">
@@ -43,6 +45,7 @@
     <button
       class="py-3 px-4 bg-[#FAFAFA] text-sm font-semibold text-black cursor-pointer rounded-xl active:translate-y-1 transition-transform duration-75"
       type="button"
+      (click)="closeModal()"
     >
       Cancelar
     </button>
