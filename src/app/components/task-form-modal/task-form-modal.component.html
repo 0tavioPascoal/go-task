@@ -20,7 +20,9 @@
         placeholder="Escreva o que deverá ser feito!"
         formControlName="name"
       />
-      <p class="font-semibold text-sm text-red-500">O campo é obrigatorio!</p>
+      @if (taskForm.get('name')?.touched && taskForm.get('name')?.invalid) {
+        <p class="font-semibold text-sm text-red-500">O campo é obrigatorio!</p>
+      }
     </div>
 
     <div>
@@ -31,7 +33,9 @@
         placeholder="Adicione uma descrição"
         formControlName="description"
       />
-      <p class="font-semibold text-sm text-red-500">O campo é obrigatorio!</p>
+      @if (taskForm.get('description')?.touched && taskForm.get('description')?.invalid) {
+        <p class="font-semibold text-sm text-red-500">O campo é obrigatorio!</p>
+      }
     </div>
   </div>
 
