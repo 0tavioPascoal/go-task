@@ -1,6 +1,6 @@
 import { DialogRef } from '@angular/cdk/dialog';
 import { Component, inject } from '@angular/core';
-import { ModalControllerService } from '../../services/modal-controller.service';
+import { ModalControllerService } from '../../../services/modal-controller.service';
 
 @Component({
   selector: 'app-task-card',
